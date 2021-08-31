@@ -1,0 +1,14 @@
+https://resources.infosecinstitute.com/how-to-scan-email-headers-for-phishing-and-malicious-content/#gref
+
+Possible sign of phishing:
+  To field is blank
+  Unusual email client
+  Suspicious path from sender to recipient
+    Claims to be sent from US, but originates from China 
+  Mismatch in sender address
+    smtp.mailfrom
+    Return-Path
+    From:
+    Reply-to/Bounces-to
+  Failed DKIM/SPF verification
+  

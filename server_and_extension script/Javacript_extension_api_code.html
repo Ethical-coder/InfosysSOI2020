@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			//sending post request to run ml model and search url in dataset
+			var xmlHttp=new XMLHttpRequest();
+			//jsonify the javascript object
+			data=JSON.stringify({"url":"Hello From Javascript not from python"});
+			//sendind data and connecting to server
+			xmlHttp.open("POST","http://127.0.0.1:80/",true);
+			xmlHttp.send(data);
+			//receiving the processed response back from server
+			xmlHttp.onload=function(){
+				console.log("hello");
+				var data=xmlHttp.response;
+				console.log(data);
+				console.log("end");
+			};
+		</script>
+		<h1>testing</h1>
+	</head>
+
+	<body>
+	</body>
+</html>

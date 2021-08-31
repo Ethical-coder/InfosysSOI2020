@@ -1,0 +1,31 @@
+{
+
+	"manifest_version":2,
+	"name":"Phising Alert",
+	"version":"1.0",
+	"description":"This will alert you if you are on a not trustable website",
+	"icons":{
+		"16":"./image/phising16.png",
+		"48":"./image/phising48.png"
+	},
+	"browser_action": {
+          "default_icon": {                    
+            "16": "./image/phising16.png",           
+            "48": "./image/phising48.png"          
+          },
+          "default_title": "Phishing Detector",      
+          "default_popup": "./html/popup.html"        
+        },
+	"content_scripts":[
+		{
+		"matches":[
+					"<all_urls>"
+					],
+		"js":["./script/content.js"]
+		}
+	],
+	"permissions":[
+		"tabs"
+	]
+
+}
